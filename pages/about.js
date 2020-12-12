@@ -1,3 +1,8 @@
+import Button from '@material-ui/core/Button';
 export default function AboutPage() {
-  return <div>This is Nguyen Tuan Anh on vercel and edit by git!</div>;
+  return (
+    <Button variant="contained" color="primary">
+      Hello World. My name is Nguyen Tuan Anh
+    </Button>
+  );
 }

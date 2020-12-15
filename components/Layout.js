@@ -15,6 +15,7 @@ function Layout(props) {
         h1 {
           font-weight: 700;
           color:red;
+background:red;
         }
         p {
           margin-bottom: 10px;

@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
+import App, { Container } from 'next/app'
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
+import Layout from '../components/Layout'
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -25,7 +27,11 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
+    <Container>
+        <Layout>
         <Component {...pageProps} />
+    </Layout>
+      </Container>
       </ThemeProvider>
     </React.Fragment>
   );

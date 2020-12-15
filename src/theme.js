@@ -21,7 +21,7 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
         h1: {
-          color: 'red',
+          color: red,
         },
       },
     },

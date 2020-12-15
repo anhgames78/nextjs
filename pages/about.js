@@ -20,6 +20,7 @@ export default function About() {
         <ProTip />
         <Copyright />
       </Box>
+    <h1> TEST </h1>
     </Container>
   );
 }

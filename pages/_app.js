@@ -7,7 +7,7 @@ import theme from '../src/theme';
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
-  const bootstrap4 = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossOrigin="anonymous";
+  const bootstrap4 = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
   const fontawesome = "https://use.fontawesome.com/releases/v5.1.0/css/all.css";
   const latoFont = "https://fonts.googleapis.com/css?family=Lato";
   const gstatic = "https://fonts.gstatic.com";
@@ -30,7 +30,7 @@ export default function MyApp(props) {
   <meta charSet="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Page Title</title>
-  <link rel="stylesheet" href={bootstrap4} />
+  <link rel="stylesheet" href={bootstrap4} integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossOrigin="anonymous" />
   <link rel="stylesheet" href={fontawesome} />
   <link href={latoFont} rel="stylesheet" />
   <link rel="preconnect" href={gstatic} />

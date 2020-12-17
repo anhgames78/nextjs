@@ -8,8 +8,8 @@ import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 
 export default function About() {
-  return (
-    <Container maxWidth="sm">
+    return (
+        <Container maxWidth="sm">
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
           Next.js example
@@ -20,7 +20,6 @@ export default function About() {
         <ProTip />
         <Copyright />
       </Box>
-    <h1> TEST </h1>
-    </Container>
-  );
+        </Container>
+    );
 }

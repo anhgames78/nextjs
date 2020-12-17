@@ -169,7 +169,6 @@ header.masthead {
     padding-top: 150px;
     padding-bottom: 100px;
     color: white;
-    background: url("../img/bg-pattern.png"), #7b4397;
     background: url("https://startbootstrap.github.io/startbootstrap-new-age/img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
 }
 
@@ -302,7 +301,6 @@ section.features .feature-item i {
 section.cta {
     position: relative;
     padding: 250px 0;
-    background-image: url("../img/bg-cta.jpg");
     background-position: center;
     background-size: cover;
 }

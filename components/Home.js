@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const Home = ({ className }) => {
+const Home = () => {
     return (
         <div>
   <header className="masthead">
@@ -71,12 +71,6 @@ const Home = ({ className }) => {
 </div>
 
     );
-};
-
-Home.displayName = 'Home';
-
-Home.propTypes = {
-    className: PropTypes.string,
 };
 
 export default Home;

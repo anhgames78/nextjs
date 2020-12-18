@@ -14,7 +14,7 @@ export default function Nav() {
     <div className="collapse navbar-collapse" id="navbarResponsive">
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <a className="nav-link js-scroll-trigger" href="tintuc.html">Tin tức</a>
+          <Link className="nav-link js-scroll-trigger" href="/testjson">Tin tức</Link>
         </li>
         <li className="nav-item">
           <a className="nav-link js-scroll-trigger" href="chitiet.html">Tin chi tiết</a>

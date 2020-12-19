@@ -1,6 +1,7 @@
 // pages/posts/[id].js
 
 import Link from '../../src/Link';
+import Nav from '../../src/Nav';
 import Copyright from '../../src/Copyright';
 
 const api = "https://anhgames78.github.io/public/";
@@ -8,6 +9,13 @@ const DATA = api + "data.json";
 
 function Post({ post }) {
   // Render post...
+   return (
+    <>
+     <Nav />
+     <h1 style={{ textAlign: "center" }}>{post.title}</h1>
+     <Copyright />
+    </>
+   );
 }
 
 // This function gets called at build time

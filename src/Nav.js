@@ -14,13 +14,13 @@ export default function Nav() {
     <div className="collapse navbar-collapse" id="navbarResponsive">
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link js-scroll-trigger" href="/posts/4">Tin tức</Link>
+          <Link className="nav-link js-scroll-trigger" href="/posts">Tin tức</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link js-scroll-trigger" href="chitiet.html">Tin chi tiết</a>
+          <Link className="nav-link js-scroll-trigger" href="/about">About</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link js-scroll-trigger" href="contact.html">Contact</a>
+          <Link className="nav-link js-scroll-trigger" href="/contact">Contact</Link>
         </li>
       </ul>
     </div>

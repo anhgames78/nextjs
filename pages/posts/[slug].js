@@ -23,10 +23,9 @@ export async function getStaticPaths() {
   // Call an external API endpoint to get posts
   const response = await fetch(DATA);
   const posts = await response.json();
-  const ids = Object.keys(posts); // get obj key from posts as ["0","1","2",...]
-  // Get the paths we want to pre-render based on posts
-  const paths = ids.map((key) => ({
-    params: { id: key },
+    // Get the paths we want to pre-render based on posts
+  const paths = posts.map((post) => ({
+    params: { slug: post.id.toString() },
   }));
   
   // We'll pre-render only these paths at build time.
@@ -36,10 +35,10 @@ export async function getStaticPaths() {
 
 // This also gets called at build time
 export async function getStaticProps(context) {
-  const { id } = context.params;
+  const { slug } = context.params;
   const response = await fetch(DATA);
   const posts = await response.json();
-  const post = posts[id];
+  const post = posts.find((post) => post.id.toString() === slug);
   return { props: { post } };
 }
 

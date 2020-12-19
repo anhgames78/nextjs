@@ -22,7 +22,7 @@ function Post({ post }) {
 export async function getStaticPaths() {
   // Call an external API endpoint to get posts
   const response = await fetch(DATA);
-  const posts = await res.json();
+  const posts = await response.json();
   const ids = Object.keys(posts); // get obj key from posts as ["0","1","2",...]
   // Get the paths we want to pre-render based on posts
   const paths = ids.map((key) => ({
@@ -39,7 +39,7 @@ export async function getStaticProps(context) {
   const { id } = context.params;
   const response = await fetch(DATA);
   const posts = await response.json();
-  const post = posts[name];
+  const post = posts[id];
   return { props: { post } };
 }
 

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Link from '../../src/Link';
 import Nav from '../../src/Nav';
 import Header from '../../components/Header';
@@ -7,7 +9,7 @@ export default function Posts() {
     return (
         <React.Fragment>
           <Nav />  
-          <Header title="Trang Danh Sách Tin" />    
+          <Header title = "Trang Danh Sách Tin" />    
           <Copyright />    
         </React.Fragment>
     );

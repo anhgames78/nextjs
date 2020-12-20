@@ -1,4 +1,5 @@
 // pages/posts/[id].js
+import React from 'react';
 
 import Link from '../../src/Link';
 import Nav from '../../src/Nav';
@@ -10,11 +11,12 @@ const DATA = api + "data.json";
 function Post({ post }) {
   // Render post...
    return (
-    <>
+    <React.Fragment>
      <Nav />
+     <Header title = "Trang Chi Tiết Tin" />
      <h1 style={{ textAlign: "center" }}>{post.title}</h1>
      <Copyright />
-    </>
+    </React.Fragment>
    );
 }
 

@@ -5,7 +5,7 @@ const Header = (props) => {
       <div className="row h-100">
         <div className="col-lg-12 my-auto">
           <div className="header-content mx-auto">
-            <h1 className="mb-1 text-center">props.title</h1>
+            <h1 className="mb-1 text-center">{props.title}</h1>
           </div>
         </div>
       </div>

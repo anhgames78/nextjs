@@ -4,6 +4,7 @@ import React from 'react';
 import Link from '../../src/Link';
 import Nav from '../../src/Nav';
 import Copyright from '../../src/Copyright';
+import Header from '../../components/Header';
 
 const api = "https://anhgames78.github.io/public/";
 const DATA = api + "data.json";
@@ -14,7 +15,22 @@ function Post({ post }) {
     <React.Fragment>
      <Nav />
      <Header title = "Trang Chi Tiết Tin" />
-     <h1 style={{ textAlign: "center" }}>{post.title}</h1>
+      <div className="jumbotron jumbotron-fluid">
+        <div className="container">
+    <img src="http://placehold.it/1900x700" alt="" className="img-fluid" />
+    <p className="lead">{post.title}</p>
+    <hr className="my-2" />
+    {post.article}
+    <p className="lead">
+      <a className="btn btn-primary btn-lg" href={post.link.web} role="button">Learn more</a>
+    </p>
+        </div>
+      </div>
+      <div className="container">
+        <h4 className="card-title text-center">Tin liên quan</h4>
+        <div className="row mt-3">
+        </div>
+      </div>
      <Copyright />
     </React.Fragment>
    );

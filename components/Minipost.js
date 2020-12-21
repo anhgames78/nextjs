@@ -1,7 +1,10 @@
 import Link from '../src/Link';
+import {time_diff} from '../pages/api/api.js';
 
 const Minipost = (props) => {
   const address = "/posts/" + props.id.toString();
+  var today = new Date();
+  var [days,hours,minutes,seconds] = time_diff(props.time,today);
   return (
     <div className="col-4">
       <div className="card-deck">
@@ -10,7 +13,7 @@ const Minipost = (props) => {
           <div className="card-body">
             <Link href={address} className="card-title">{props.title}</Link>
             <p className="card-text">{props.summary}</p>
-            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+            <p className="card-text"><small className="text-muted">Last updated {days} days, {hours} hours, {minutes} mins, {seconds} seconds ago</small></p>
           </div>
         </div>
       </div>

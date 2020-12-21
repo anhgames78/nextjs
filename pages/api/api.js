@@ -1,5 +1,5 @@
 //API to calculate different between two date object
-function time_diff(date1,date2)
+const time_diff = function(date1,date2)
 {
     // get total seconds between the times
     var delta = Math.abs(date1 - date2) / 1000;
@@ -22,4 +22,4 @@ function time_diff(date1,date2)
     return [days,hours,minutes,seconds];
 }
 
-export {time_diff}
+export { time_diff }

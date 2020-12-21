@@ -4,7 +4,8 @@ import {time_diff} from '../pages/api/api.js';
 const Minipost = (props) => {
   const address = "/posts/" + props.id.toString();
   var today = new Date();
-  var [days,hours,minutes,seconds] = time_diff(props.time,today);
+  var postday = new Date(props.time);
+  var [days,hours,minutes,seconds] = time_diff(today,postday);
   return (
     <div className="col-4">
       <div className="card-deck">

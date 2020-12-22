@@ -34,7 +34,7 @@ function Post({ slug,posts }) {
       <div className="container">
         <h4 className="card-title text-center">Tin liên quan</h4>
         <div className="row mt-3">
-          {relations.map((relation) => {
+          {relations.map(function(relation){
             const post = this.find((post) => post.id === relation);
             return <Minipost {...post} />;},posts)}
         </div>

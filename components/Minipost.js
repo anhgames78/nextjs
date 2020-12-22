@@ -1,5 +1,5 @@
 import Link from '../src/Link';
-import {time_diff} from '../pages/api/api.js';
+import { time_diff } from '../src/myAPI';
 
 const Minipost = (props) => {
   const address = "/posts/" + props.id.toString();

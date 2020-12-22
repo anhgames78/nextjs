@@ -16,7 +16,7 @@ export default function Posts({ posts }) {
           	<Header title = "Trang Danh Sách Tin" />
           	<div className="container">
   				<div className="row mt-3">
-  					{posts.map((post) => <Minipost id = {post.id} title = {post.title} summary = {post.summary} />)}
+  					{posts.map((post) => <Minipost {...post} />)}
   				</div>
   			</div>
             <Copyright />    

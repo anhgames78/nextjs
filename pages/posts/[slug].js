@@ -5,11 +5,16 @@ import Link from '../../src/Link';
 import Nav from '../../src/Nav';
 import Copyright from '../../src/Copyright';
 import Header from '../../components/Header';
+import Minipost from '../../components/Minipost';
 
 const api = "https://anhgames78.github.io/public/";
 const DATA = api + "data.json";
 
-function Post({ post }) {
+function Post({ slug,posts }) {
+  const post = posts.find((post) => post.id.toString() === slug);
+  const master = post.link.master;
+  const slave = post.link.slave;
+  const relations = master.concat(slave);
   // Render post...
    return (
     <React.Fragment>
@@ -29,6 +34,9 @@ function Post({ post }) {
       <div className="container">
         <h4 className="card-title text-center">Tin liên quan</h4>
         <div className="row mt-3">
+          {relations.map((relation) => {
+            const post = this.find((post) => post.id === relation);
+            return <Minipost {...post} />;},posts)}
         </div>
       </div>
      <Copyright />
@@ -56,8 +64,8 @@ export async function getStaticProps(context) {
   const { slug } = context.params;
   const response = await fetch(DATA);
   const posts = await response.json();
-  const post = posts.find((post) => post.id.toString() === slug);
-  return { props: { post } };
+  
+  return { props: { slug,posts } };
 }
 
 export default Post

@@ -12,8 +12,8 @@ const DATA = api + "data.json";
 
 function Post({ slug,posts }) {
   const post = posts.find((post) => post.id.toString() === slug);
-  const master = post.link.master;
-  const slave = post.link.slave;
+  const master = post.link.data.master;
+  const slave = post.link.data.slave;
   const relations = master.concat(slave);
   // Render post...
    return (

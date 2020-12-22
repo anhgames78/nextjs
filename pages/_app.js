@@ -33,9 +33,7 @@ export default function MyApp(props) {
         <script src="https://unpkg.com/react-dom@latest/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/babel-standalone@latest/babel.min.js" crossorigin="anonymous"></script>
-        <!-- Fonts to support Material Design -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-        <!-- Icons to support Material Design -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   
         <link rel="stylesheet" href={bootstrap4} integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossOrigin="anonymous" />
